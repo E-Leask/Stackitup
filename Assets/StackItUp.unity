@@ -126,13 +126,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 293229825}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32469da9afa2068459494e4388b5cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 854909940}
-  dropItem: {fileID: 1594931414969212, guid: c13eee1cea5da1b4da01eccc0b0159b9, type: 2}
+  Square: {fileID: 1594931414969212, guid: c13eee1cea5da1b4da01eccc0b0159b9, type: 2}
+  Triangle: {fileID: 1543630187737552, guid: 5f16fc3609c36f147b6881b7348b7736, type: 2}
 --- !u!1 &854909936
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +302,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 293340667
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b66a2622cc4cefc44872339b6d64641f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -365,7 +366,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -282544227
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 153ad79a26bd6e04999ef654c04896ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
