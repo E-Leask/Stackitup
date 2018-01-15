@@ -8,8 +8,12 @@ public class GameController : MonoBehaviour {
 	private float maxWidth;
 	private float maxHeight;
 	private bool camControl;
+	private int whatIsSpawned;
+
 	public GameObject Square;
 	public GameObject Triangle;
+	public GameObject Circle;
+	public GameObject Rectangle;
 
 
 	// Use this for initialization
@@ -23,7 +27,7 @@ public class GameController : MonoBehaviour {
 		Vector3 targ = cam.ScreenToWorldPoint (upperCorner);
 		maxWidth = targ.x;
 		maxHeight = targ.y;
-
+		SpawnItem (Square);
 
 	}
 
@@ -42,8 +46,19 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown (0)) {
-
-			StartCoroutine(SpawnItem(Square));
+			whatIsSpawned=(Random.Range(0,4));
+			switch(whatIsSpawned) {
+			case 0 :StartCoroutine(SpawnItem(Square));  // prints "1"
+				break;       // and exits the switch
+			case 1 : StartCoroutine(SpawnItem(Triangle));
+				break;
+			case 2 : StartCoroutine(SpawnItem(Circle));
+				break;
+			case 3: StartCoroutine(SpawnItem(Rectangle));
+				break;
+			
+			}
+	
 		}
 		//spawn new block at x location of mouse and follow
 	}
