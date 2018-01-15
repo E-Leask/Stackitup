@@ -7,7 +7,7 @@ public class DropOnClick : MonoBehaviour {
 	public Collider2D cldr2D;
 	private float maxWidth;
 	private bool mouseClicked=false;
-	private float lastClick=1;
+	//private float lastClick=1;
 	public Camera cam;
 	public DropOnClick(){
 	}
@@ -29,7 +29,7 @@ public class DropOnClick : MonoBehaviour {
 		//lastClick -= Time.deltaTime;
 		if (!mouseClicked) {
 			Vector3 rawPos = cam.ScreenToWorldPoint (Input.mousePosition);
-			Vector3 targPos = new Vector3 (rawPos.x, transform.position.y, 0.0f);
+			Vector3 targPos = new Vector3 (rawPos.x, rawPos.y, 0.0f);
 			float targW = Mathf.Clamp (targPos.x, -maxWidth, maxWidth);
 			targPos = new Vector3 (targW, targPos.y, targPos.z);
 			rb2D.MovePosition (targPos);
